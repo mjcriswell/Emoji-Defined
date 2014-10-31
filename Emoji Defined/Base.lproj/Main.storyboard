@@ -1,25 +1,107 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EbT-DC-T2P">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Emoji Dictionary-->
+        <scene sceneID="yeP-Cr-5kw">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oOo-yM-WWl" customClass="EmojiListViewController" customModule="Emoji_Defined" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="zAV-RA-2RW"/>
+                        <viewControllerLayoutGuide type="bottom" id="h8M-J9-kCO"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="hik-kA-Hwm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="82w-7f-K6c">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="82w-7f-K6c" firstAttribute="leading" secondItem="hik-kA-Hwm" secondAttribute="leading" id="X27-49-2XB"/>
+                            <constraint firstItem="h8M-J9-kCO" firstAttribute="top" secondItem="82w-7f-K6c" secondAttribute="bottom" id="hSy-sC-xBG"/>
+                            <constraint firstAttribute="trailing" secondItem="82w-7f-K6c" secondAttribute="trailing" id="lEL-W2-9AA"/>
+                            <constraint firstItem="82w-7f-K6c" firstAttribute="top" secondItem="hik-kA-Hwm" secondAttribute="top" id="lsu-A7-n63"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Emoji Dictionary" id="C5m-i6-O0j"/>
+                    <connections>
+                        <outlet property="tableView" destination="82w-7f-K6c" id="XeI-6u-9wg"/>
+                        <segue destination="8C6-cK-wYN" kind="show" identifier="tableViewToEmojiSegue" id="Agm-Ej-ED8"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDQ-fY-BPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="405" y="412"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BSQ-Fi-vG4">
+            <objects>
+                <navigationController id="EbT-DC-T2P" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sgk-xE-IdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oOo-yM-WWl" kind="relationship" relationship="rootViewController" id="dLC-5U-XiY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cpl-7G-3cP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="412"/>
+        </scene>
+        <!--Emoji Detail View Controller-->
+        <scene sceneID="Pf0-bj-ET8">
+            <objects>
+                <viewController id="8C6-cK-wYN" customClass="EmojiDetailViewController" customModule="Emoji_Defined" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HIe-DC-AgQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="q0a-Cz-mGq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fF4-wp-ZBb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Emoji definition" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPj-2L-rDs">
+                                <rect key="frame" x="26" y="434" width="548" height="116"/>
+                                <color key="backgroundColor" red="0.51736151020780397" green="0.64040798611111116" blue="0.61583794761764854" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="116" id="YCn-Gw-SLE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="😄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0o-lT-Gk1">
+                                <rect key="frame" x="26" y="114" width="548" height="177"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="177"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N0o-lT-Gk1" firstAttribute="leading" secondItem="fF4-wp-ZBb" secondAttribute="leadingMargin" constant="10" id="EkA-Q1-qfI"/>
+                            <constraint firstItem="N0o-lT-Gk1" firstAttribute="top" secondItem="HIe-DC-AgQ" secondAttribute="bottom" constant="50" id="FIK-cN-A7U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OPj-2L-rDs" secondAttribute="trailing" constant="10" id="GqV-pb-raj"/>
+                            <constraint firstItem="OPj-2L-rDs" firstAttribute="leading" secondItem="fF4-wp-ZBb" secondAttribute="leadingMargin" constant="10" id="HTF-ot-9Ni"/>
+                            <constraint firstItem="q0a-Cz-mGq" firstAttribute="top" secondItem="OPj-2L-rDs" secondAttribute="bottom" constant="50" id="omi-Eh-viB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N0o-lT-Gk1" secondAttribute="trailing" constant="10" id="zbQ-wr-xfE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emojiDefinitionLabel" destination="OPj-2L-rDs" id="hsY-qu-yrK"/>
+                        <outlet property="emojiLabel" destination="N0o-lT-Gk1" id="31N-qU-vII"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8z-dJ-0Gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1082" y="412"/>
         </scene>
     </scenes>
 </document>
