@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A4FD7589-E917-448D-8BF9-F76159701048</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Emoji Defined</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1B1FA729D79D12DC9445D0B78BE57865F24B84CD</key>
+		<string>https://github.com/mjcriswell/Emoji-Defined.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Emoji Defined.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1B1FA729D79D12DC9445D0B78BE57865F24B84CD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mjcriswell/Emoji-Defined.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1B1FA729D79D12DC9445D0B78BE57865F24B84CD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1B1FA729D79D12DC9445D0B78BE57865F24B84CD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Emoji%20Defined</string>
+		</dict>
+	</array>
+</dict>
+</plist>
